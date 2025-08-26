@@ -1,0 +1,17 @@
+# Backend configuration for cms
+
+backend:
+  name: git-gateway
+  # branch: main Branch to update (optional; defaults to main)  
+  media_folder: "public/media"
+  public_folder: "/public"
+  collections:
+    name: 'blog'
+    label: 'Blog Posts'
+    folder: 'posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
