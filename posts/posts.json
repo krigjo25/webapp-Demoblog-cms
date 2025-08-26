@@ -1,7 +1,7 @@
 {
-    "layout": "layout.html",
     "tags": "post",
     "url": "/posts/",
     "name": "blog-1",
+    "layout": "layout.html",
     "title": "My First Post"
 }
