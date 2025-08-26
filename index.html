@@ -1,0 +1,12 @@
+---
+layout: layout.html
+---
+
+List of my blog posts:
+{% for post in collections.post %}
+    <li>
+        <a href="{{ post.data.url }}/{{ post.data.name }} ">{{ post.data.title }}</a>
+
+        <summary>{{ post.content }}</summary>
+    </li>
+{% endfor %}
