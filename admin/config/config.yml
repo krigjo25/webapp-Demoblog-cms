@@ -1,12 +1,15 @@
+# Backend configuration for cms local static change
+
 backend:
-  name: test-repo
-  # branch: main Branch to update (optional; defaults to main)
+  name: git
+  local_backend: true # Allows local development
+  # (branch: main) Branch to update (optional; defaults to main)
 media_folder: "images"
-public_folder: "/images"
+public_folder: "../public"
 collections:
   - name: 'blog'
-    label: 'Blog Posts'
-    folder: 'posts'
+    label: 'Create new post'
+    folder: '../posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:

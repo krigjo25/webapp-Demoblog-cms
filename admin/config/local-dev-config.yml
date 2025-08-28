@@ -1,0 +1,18 @@
+# Backend configuration for cms local static change
+
+backend:
+  name: git
+  local_backend: true # Allows local development
+  # (branch: main) Branch to update (optional; defaults to main)
+media_folder: "images"
+public_folder: "../public"
+collections:
+  - name: 'blog'
+    label: 'Create new post'
+    folder: '../posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
