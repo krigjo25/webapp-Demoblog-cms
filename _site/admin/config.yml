@@ -1,15 +1,18 @@
 # Backend configuration for cms
 
 backend:
-  name: test-repo
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
   local_backend: true # Allows local development
   # branch: main Branch to update (optional; defaults to main)
-media_folder: "images"
-public_folder: "/images"
+
+media_folder: "../../public/img" # Physical path to save images
+public_folder: "/img" # Web-accessible path to the images
+
 collections:
   - name: 'blog'
-    label: 'Blog Posts'
-    folder: '../../posts/'
+    label: 'Create new post'
+    folder: './posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:

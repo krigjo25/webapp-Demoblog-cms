@@ -9,9 +9,10 @@ public_folder: "../public"
 collections:
   - name: 'blog'
     label: 'Create new post'
-    folder: '../posts'
+    folder: '../posts'                          # Path to the folder containing blog posts
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
+    
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
