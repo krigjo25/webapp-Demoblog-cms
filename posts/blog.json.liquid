@@ -1,0 +1,15 @@
+---
+permalink: /blogs-posts.json
+---
+
+[
+    {%- for post in collections.blog -%}
+        {
+            "tags": "post",
+            "name": "blog-1",
+            "layout": "layout.html",
+            "url": "{{ post.url | jsonify }}",
+            "title": "{{ post.data.title | jsonify }}"
+        }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+]
