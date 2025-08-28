@@ -1,18 +1,24 @@
 # Backend configuration for cms local static change
 
 backend:
-  name: git
-  local_backend: true # Allows local development
-  # (branch: main) Branch to update (optional; defaults to main)
-media_folder: "images"
-public_folder: "../public"
-collections:
-  - name: 'blog'
-    label: 'Create new post'
-    folder: '../posts'
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  local_backend: true                           # Allows local development
+  # (branch: main)                              # Branch to update (optional; defaults to main)
+
+media_folder: "../../public/img"                # Physical path to save images
+public_folder: "/public"                        # Web-accessible path to the images
+
+collections:                                    # Initializing the UI
+  - name: 'blog'                                
+    label: 'Create new post'                    # Label for the blog post creation / Menu name
+    folder: '/posts'                          # Save path to the posts
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
+
+    fields:                                     # Initializing the User interface
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "tags", name: "tags", widget: "select", options: ["post", "news", "tutorial"] }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "layout", name: "layout", widget: "hidden", default: "post-layout.html" }
