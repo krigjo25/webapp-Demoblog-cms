@@ -21,3 +21,4 @@ collections:                                    # Initializing the UI
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "tags", name: "tags", widget: "select", options: ["post", "news", "tutorial"] }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "layout", name: "layout", widget: "hidden", default: "post-layout.html" }
