@@ -1,5 +1,4 @@
 #   Git Ignore  builds and dependencies
-
 /_site
 /.cache
 .DS_Store
