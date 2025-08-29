@@ -16,7 +16,7 @@ collections:                                    # Initializing the UI
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
 
-    fields:                                     # Initializing the User interface
+    fields:                                     # Initializing the User interface fields
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "tags", name: "tags", widget: "select", options: ["post", "news", "tutorial"] }
