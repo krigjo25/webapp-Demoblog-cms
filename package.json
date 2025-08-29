@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:build": "sass static/sass:static/css",
+    "sass:watch": "sass --watch static/sass:static/css",
+    "start": "concurrently \"npm run sass:watch\" \"npx @11ty/eleventy\"",
     "11ty": "npx @11ty/eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "@krigjo25",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
+
   "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy"
+    "concurrently": "^9.2.1",
+    "eleventy": "^1.0.7",
+    "sass": "^1.91.0"
   }
 }
