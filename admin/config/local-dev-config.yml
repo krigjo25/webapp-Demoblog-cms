@@ -16,9 +16,12 @@ collections:                                    # Initializing the UI
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
 
-    fields:                                     # Initializing the User interface
+    fields:                                     # Initializing the User interface fields
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "tags", name: "tags", widget: "select", options: ["post", "news", "tutorial"] }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "layout", name: "layout", widget: "hidden", default: "post-layout.html" }
+      - { label: "summary", name: "summary", widget: "hidden", default: "post-layout.html" }
+
+# End of file
