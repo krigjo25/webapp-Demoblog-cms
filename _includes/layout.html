@@ -3,21 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/index.css">
         
         <title>My Blog</title>
     </head>
     <body>
-        <header>
-
-        </header>
+        {% include "header.njk" %}
         <main>
-            <h1>{{ title | default: "Welcome to My Blog"}}</h1>
+            
             <p> {{ content }}</p>
         </main>
-        <footer>
-            <p>&copy; 2023 My Blog</p>
-        </footer>
 
-        
+        {% include "footer.njk" %}
+
     </body>
 </html>
