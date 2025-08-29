@@ -1,6 +1,7 @@
-/node_modules
+#   Git Ignore  builds and dependencies
+
+/_site
 /.cache
 .DS_Store
-/_site
 static/css
-
+/node_modules
