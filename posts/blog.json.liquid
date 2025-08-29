@@ -6,7 +6,7 @@ permalink: /blogs-posts.json
     {%- for post in collections.post -%}
         {
             "tags": "post",
-            "layout": {{post.layout}},
+            "layout": "post-layout.html",
             "url": {{ post.url | jsonify }},
             "title": {{ post.data.title | jsonify }}
         }{%- unless forloop.last -%},{%- endunless -%}
