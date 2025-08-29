@@ -1,9 +1,7 @@
 # Backend configuration for cms local static change
 
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
-  local_backend: true                           # Allows local development
+  name: git-gateway
   # (branch: main)                              # Branch to update (optional; defaults to main)
 
 media_folder: "../../public/img"                # Physical path to save images
