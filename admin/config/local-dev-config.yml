@@ -12,7 +12,7 @@ public_folder: "/public"                        # Web-accessible path to the ima
 collections:                                    # Initializing the UI
   - name: 'blog'                                
     label: 'Create new post'                    # Label for the blog post creation / Menu name
-    folder: '/posts'                          # Save path to the posts
+    folder: '/posts'                            # Save path to the posts
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
 
