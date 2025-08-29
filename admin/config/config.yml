@@ -12,7 +12,7 @@ public_folder: "/public"                        # Web-accessible path to the ima
 collections:                                    # Initializing the UI
   - name: 'blog'                                
     label: 'Create new post'                    # Label for the blog post creation / Menu name
-    folder: '/posts'                          # Save path to the posts
+    folder: '/posts'                            # Save path to the posts
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Title of the file to be changed
 
@@ -22,3 +22,6 @@ collections:                                    # Initializing the UI
       - { label: "tags", name: "tags", widget: "select", options: ["post", "news", "tutorial"] }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "layout", name: "layout", widget: "hidden", default: "post-layout.html" }
+      - { label: "summary", name: "summary", widget: "hidden", default: "post-layout.html" }
+
+# End of file
