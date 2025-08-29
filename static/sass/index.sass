@@ -1,16 +1,32 @@
 *, *::before, *::after
     box-sizing: border-box
+    writing-mode: horizontal-tb
 
+$font-color: rgb(58, 67, 75)
 
 body
-    background-color: #404040
-
-
+    margin: 0
+    color: $font-color
+    background-color: #fafafafa
+    
+    
 
 li
     margin: 1em
     list-style: none
     display: inline-block
+
+header, footer
+    margin: 0
+    color: $font-color
+    background-color: #B59A6E
+
+    h1
+        margin: .5em
+
+main
+    min-block-size: 100vw
+    
 
 flex-wrap-row
     display: flex
