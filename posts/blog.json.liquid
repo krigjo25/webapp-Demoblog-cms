@@ -9,6 +9,7 @@ permalink: /blogs-posts.json
             "layout": "post-layout.html",
             "url": {{ post.url | jsonify }},
             "title": {{ post.data.title | jsonify }}
+            "summary": {{ post.data.summary | jsonify}}
         }{%- unless forloop.last -%},{%- endunless -%}
     {%- endfor -%}
 ]
